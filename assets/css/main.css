@@ -76,7 +76,7 @@
 	}
 
 	body {
-		background: #202024;
+		background: #000000;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1167,7 +1167,7 @@
 		justify-content: center;
 		padding: 8em 4em 6em 4em;
 		min-height: 70vh;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/Gym.png");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -1369,7 +1369,7 @@
 	
 	position: relative;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 3rem;
 	z-index: 1000;
 }
 .content img{
@@ -1381,7 +1381,15 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: rgb(0, 70, 58);
+	background: black ;
+	
+}
+ .cardsback2{
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: black;
 	
 }
 .cardsback::before{
@@ -1533,10 +1541,10 @@
     height: 100%;
     background-position-x: center;
     background-size: cover;
+    
     z-index: -1;
 	overflow: hidden;
 }
-
 
 .stars span{
     position: absolute;
@@ -1551,7 +1559,7 @@
      0 0 0 8px rgba(255, 255, 255, 0.1),
     0 0 20px rgba(255, 255, 255, 1);
     animation: animatestar .1s linear infinite;
-    z-index: 10;
+    /* z-index: 10; */
 	opacity: 0;
 }
 .stars span::before{
@@ -1587,8 +1595,8 @@
     }
 
 }
-.stars span:nth-child(1){
-	/* top: 0px; */
+ .stars span:nth-child(1){
+	top: 0px;
 	right: 100px;
 	left: initial;
 	animation-delay: 0;
@@ -1596,13 +1604,14 @@
 	
 	 } 
 	 .stars span:nth-child(2){
-	/* top: -20px; */
+	top: -20px;
 	right: 325px;
 	left: initial;
 	animation-delay: 0.2s;
 	animation-duration: 3s;
 	
-	 }
+	  }
+	  
 	 .stars span:nth-child(3){
 	/* top: 0px; */
 	right: 310px;
@@ -1719,7 +1728,104 @@
 	
 	 } 
 	
+/* Plans -------------------------------*/
+#plans{
+	/* width: 100%; */
+	height: 600px;
+	color: black;
+	border: 2px red;
+	justify-content: center;
+	align-items: center;
+}
+.plan-container{
+	width: 1100px;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 230px;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 
+}
+.plan-container .plan-box{
+	position: relative;
+	width: 300px;
+	height: 265px;
+	border-radius: 10px;
+	text-align: center;
+	background: rgb(63, 63, 63);
+	padding: 100px 40px 50 px;
+	box-shadow: 15px 45px rgba(255, 255, 255, 0.568);
+
+}
+.plan-container .plan-box:before{
+	content: '';	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #ff226d;
+	border-radius: 10px;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+}
+
+.plan-container .plan-box:hover:before{
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition:  transform 0.5s;
+	box-shadow: 15px 45px rgb(255, 255, 255);
+}
+
+.plan-container .plan-box h2{
+	position: absolute;
+	text-align: center;
+	left: 40px;
+	top: 60px;
+	font-size: 4em ;
+	font-weight: 800; 
+	z-index: 10;
+	opacity: 0.1;
+	transition: 0.5s;
+}
+.plan-container .plan-box:hover h2{
+	opacity: 1;
+	columns: #fff;
+	transform: translateY(-40px);
+}
+.plan-container .plan-box h3{
+	position: relative;
+	font-size: 1.5em ;
+	text-align: center;
+	z-index: 11;
+	color: rgb(241, 241, 241);
+	transition: 0.5s;
+}
+.plan-box p{
+	position: relative;
+	z-index: 11;
+	color: rgb(255, 255, 255);
+	transition: 0.5s; 
+}
+.p-plans{
+	position: relative;
+	margin-right: -60px;
+    z-index: 121;
+    color: #fff;
+    font-size: 1.3em;
+	font-weight: 400;
+	transition: 0.5s;
+}
+.plan-box:hover .p-plans{
+	color: black;
+	font-size: 1.4em;
+}
+
+
+
+/* Plans end ---------------------------*/
 
 /* Footer */
 
